@@ -1,0 +1,17 @@
+.knockout_match h1{
+    color: rgb(34,139,34);
+}
+.views-sec{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+}
+.views-sec a{
+    text-decoration: none;
+    color: black;
+}
+#knockout-boarder{
+    width: 40%;
+    margin: 0 auto;
+}

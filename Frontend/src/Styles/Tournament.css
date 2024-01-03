@@ -1,0 +1,30 @@
+.fixture-title{
+    cursor: pointer;
+}
+
+.file-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.upload-row {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: #e9f0ff;
+    width: 20%;
+}
+
+.upload-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+

@@ -1,0 +1,35 @@
+.Home-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-wrap {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.knockout {
+    text-align: left;
+    display: flex;
+    gap: 5px;
+}
+.elimination{
+    text-align: left;
+    display: flex;
+    gap: 5px;
+}
+.league{
+    text-align: left;
+    display: flex;
+    gap: 5px;
+}
+.multistage{
+    text-align: left;
+    display: flex;
+    gap: 5px;
+}

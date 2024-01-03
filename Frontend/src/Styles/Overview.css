@@ -1,0 +1,133 @@
+.overview-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.settings-container{
+    width: 20%;
+    border: 1px solid black;
+    align-self: flex-start;
+}
+
+.settings-header{
+    display: flex;
+    text-align: center;
+    background-color: forestgreen;
+}
+
+.sheading{
+    width: 92%;
+    color: white;
+}
+
+.settings-body ul{
+    padding-left: 0;
+    padding: 10px 1rem;
+}
+
+.settings-body ul li{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+/* ------------------- */
+
+.details-container{
+    width: 40%;
+    align-self: flex-start;
+}
+
+.details-wrapper{
+    border: 1px solid black;
+}
+
+.details-header{
+    display: flex;
+    text-align: center;
+    background-color: forestgreen;
+}
+
+.dheading{
+    width: 92%;
+    color: white;
+}
+
+.details-body ul{
+    padding-left: 0;
+    padding: 1rem 1rem;
+    margin-bottom: 0;
+}
+
+.details-body ul li{
+    display: flex;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.sport-info,
+.sport-type-info,
+.sport-url-info{
+    width: 30%;
+    text-align: center;
+}
+
+.sport-name,
+.sport-type-name,
+.sport-url-name{
+    width: 70%;
+    text-align: center;
+}
+
+.qr-btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.qr-btn p{
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+/* ---------------------- */
+
+.teams-container{
+    width: 20%;
+    border: 1px solid black;
+    align-self: flex-start;
+}
+
+.teams-header{
+    display: flex;
+    text-align: center;
+    background-color: forestgreen;
+}
+
+.theading{
+    width: 92%;
+    color: white;
+}
+
+.teams-body ul li{
+    display: flex;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.teams-body ul{
+    padding-left: 0;
+    padding: 1rem 1rem;
+    margin-bottom: 0;
+}
+
+.teams-body ul li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.team-name {
+    margin: 0 auto;
+}

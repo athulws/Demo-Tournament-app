@@ -1,0 +1,165 @@
+.quarter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ......................................modal....................................... */
+
+/* Modal container */
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+
+/* Modal content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 80%;
+    min-width: 300px;
+    height: 80%;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 120px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1000;
+}
+
+
+
+.edit_content {
+
+    height: 3rem;
+}
+
+.edit_content h3 {
+    margin-bottom: 0rem;
+    color: green;
+}
+
+#edit_line-boarder {
+    width: 26%;
+    margin: 0 auto;
+}
+
+/* ......................................modal....................................... */
+
+
+.first-schedule {
+    border: 1px solid black;
+    width: 50%;
+}
+
+.first-schedule-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.first-one {
+    background-color: rgb(34, 139, 34);
+    color: white;
+    text-align: center;
+}
+
+.first_match {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.editing-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.play-btn {
+    border: 1px solid rgb(34, 139, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 32px;
+    width: 5rem;
+}
+
+.referee {
+    border: 1px solid rgb(34, 139, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 2rem;
+}
+
+.q-final {
+    border: 1px solid rgb(34, 139, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 2rem;
+}
+
+.confirm_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#confirm-cancel {
+    border: 1px solid rgb(34, 139, 34);
+    height: 36px;
+    width: 72px;
+    color: rgb(34, 139, 34);
+    background-color: white;
+}
+
+#confirm-save {
+    height: 36px;
+    width: 72px;
+    border: none;
+    color: white;
+    background-color: rgb(34, 139, 34);
+}
