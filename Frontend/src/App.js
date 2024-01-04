@@ -19,7 +19,7 @@ function App() {
           <Route path='/fixtures' element={<Fixtures/>}/>
           <Route path='/table' element={<Table/>}/>
           <Route path='/dashboard' element={<Knockout />}/>
-          <Route path='/overview' element={<Overview />}/>
+          <Route path='/overview/:id' element={<Overview />}/>
         </Routes>
       </BrowserRouter>
     </div>

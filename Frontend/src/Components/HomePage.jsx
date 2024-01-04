@@ -36,10 +36,10 @@ const HomePage = () => {
     }
     console.log(body);
 
-    const result = await axios.post('http://localhost:8000/create-tournament', body)
+    const result = await axios.post('http://localhost:8001/create-tournament', body)
     alert(result.data.message);
 
-    location('/overview')
+    location('/overview/'+id)
   }
 
 

@@ -22,11 +22,7 @@ const db = require('./db')
 
 const createTournament = (id, teams, round) => {
 
-    // const currentTime = new Date();
-    // const endTime = new Date(currentTime.getTime() + 24 * 60 * 60 * 1000 );  // Time after 24 hours
 
-    // const endTime = new Date(currentTime);
-    // endTime.setMinutes(currentTime.getMinutes() + 1);
 
     return db.Round.findOne({ id }).then((result) => {
         if (result) {
@@ -67,7 +63,29 @@ const createTournament = (id, teams, round) => {
     })
 }
 
+
+//overview.jsx il pass cheyyan
+
+const getTournamentDetail = (id) => {
+    return db.Round.findOne({id}).then(
+        (result) => {
+            if(result){
+                return {
+                    statusCode: 200,
+                    tournament: result
+                }
+            }
+            else {
+                return {
+                    statusCode: 404,
+                    message: 'No data is available'
+                }
+            }
+        }
+    )
+}
+
 module.exports = {
-    // allTournament,
+    getTournamentDetail,
     createTournament
 }
