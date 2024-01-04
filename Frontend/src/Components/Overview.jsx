@@ -10,6 +10,12 @@ import axios from 'axios';
 
 const Overview = () => {
 
+
+
+
+
+
+
     const [id, setId] = useState('')
     const [teams, setTeams] = useState('')
     const [roundName, setRoundName] = useState('')
@@ -17,8 +23,8 @@ const Overview = () => {
     const params = useParams()
 
     const getData = async () => {
-        const result = await axios.get('http://localhost:8001/get-a-tournament/'+params.id)
-        
+        const result = await axios.get('http://localhost:8001/get-a-tournament/' + params.id)
+
         // console.log(result.data.tournament);
 
         setId(result.data.tournament.id)
@@ -26,9 +32,17 @@ const Overview = () => {
         setRoundName(result.data.tournament.round)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getData()
-    },[])
+    }, [])
+
+
+//select cheyyunna dropdown number anusarich "teams varan"
+    const teamz = [];
+
+    for (let i = 1; i <= teams; i++) {
+        teamz.push(`Team#${i}`);
+    }
     return (
         <div className='overview-wrapper'>
             <div className="settings-container">
@@ -68,7 +82,7 @@ const Overview = () => {
                         <button><FaPalette /></button>
                         <button><MdOutlineEdit /></button>
                     </div>
-    
+
                     <div className="details-body">
                         <ul>
                             <li>
@@ -114,54 +128,13 @@ const Overview = () => {
 
                 <div className="teams-body">
                     <ul>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#1</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#2</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#3</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#4</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#4</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#5</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#6</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#7</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='team-name'>
-                                <span>Team#8</span>
-                            </div>
-                        </li>
+                        {teamz.map((demo, index) => ( // array il loop nte function cheyyanaan "index"
+                            <li key={index}>{demo}</li> // index map nte on feature aan
+                        ))}
                     </ul>
                 </div>
-            </div>            
+
+            </div>
         </div>
     )
 }

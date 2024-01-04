@@ -20,6 +20,10 @@ const db = require('./db')
 //     )
 // }
 
+const generateTeamNames = (numberOfTeams) => {
+    return Array.from({ length: numberOfTeams }, (_, index) => `Team#${index + 1}`);
+  };
+
 const createTournament = (id, teams, round) => {
 
 
@@ -35,8 +39,8 @@ const createTournament = (id, teams, round) => {
             const newTournament = new db.Round({
                 id,
                 teams,
-                round
-               
+                round,
+                teamNames: generateTeamNames(teams)
             })
 
             newTournament.save()
@@ -84,6 +88,14 @@ const getTournamentDetail = (id) => {
         }
     )
 }
+
+
+
+
+
+
+
+
 
 module.exports = {
     getTournamentDetail,
