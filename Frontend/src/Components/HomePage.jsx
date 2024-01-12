@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../Styles/HomePage.css'
 import Navbar from './Navbar'
+
 import { nanoid } from 'nanoid';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -8,8 +9,9 @@ import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
 
-  const [participants, setParticipants] = useState(''); // select nte
-  const [format, setFormat] = useState(''); //radio button
+  const [id, setId] = useState('')
+  const [participants, setParticipants] = useState('');
+  const [format, setFormat] = useState('');
 
   const [selectError, setSelectError] = useState('');
 
@@ -20,12 +22,9 @@ const HomePage = () => {
   };
 
   const handleCreateTournament = async (e) => {
+    // prevent refresh of page
     e.preventDefault()
 
-    if (!participants || !format) {
-      setSelectError('Please select round & number of teams');
-      return;
-    }
 
     const id = nanoid(5);
 
@@ -36,7 +35,7 @@ const HomePage = () => {
     }
     console.log(body);
 
-    const result = await axios.post('http://localhost:8001/create-tournament', body)
+    const result = await axios.post('http://localhost:8005/create-tournament', body)
     alert(result.data.message);
 
     location('/overview/'+id)
@@ -94,8 +93,8 @@ const HomePage = () => {
                     </div>
                   </div>
                 </form>
-
                 {selectError && <p className='text-danger'>{selectError}</p>}
+
               </div>
 
               <div className="accept">

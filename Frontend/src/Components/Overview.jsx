@@ -10,39 +10,6 @@ import axios from 'axios';
 
 const Overview = () => {
 
-
-
-
-
-
-
-    const [id, setId] = useState('')
-    const [teams, setTeams] = useState('')
-    const [roundName, setRoundName] = useState('')
-
-    const params = useParams()
-
-    const getData = async () => {
-        const result = await axios.get('http://localhost:8001/get-a-tournament/' + params.id)
-
-        // console.log(result.data.tournament);
-
-        setId(result.data.tournament.id)
-        setTeams(result.data.tournament.teams)
-        setRoundName(result.data.tournament.round)
-    }
-
-    useEffect(() => {
-        getData()
-    }, [])
-
-
-//select cheyyunna dropdown number anusarich "teams varan"
-    const teamz = [];
-
-    for (let i = 1; i <= teams; i++) {
-        teamz.push(`Team#${i}`);
-    }
     return (
         <div className='overview-wrapper'>
             <div className="settings-container">
@@ -57,7 +24,7 @@ const Overview = () => {
                             <div className='round-info'>
                                 <span>First Round</span>
                             </div>
-                            <div className='round-data'>
+                            <div className='round-data'> 
                                 <span>Seeded</span>
                             </div>
                         </li>
@@ -90,7 +57,7 @@ const Overview = () => {
                                     <span>Name</span>
                                 </div>
                                 <div className='sport-name'>
-                                    <span>{roundName}</span>
+                                    <span></span>
                                 </div>
                             </li>
                             <li>
@@ -128,9 +95,9 @@ const Overview = () => {
 
                 <div className="teams-body">
                     <ul>
-                        {teamz.map((demo, index) => ( // array il loop nte function cheyyanaan "index"
-                            <li key={index}>{demo}</li> // index map nte on feature aan
-                        ))}
+                        <li>
+
+                        </li>
                     </ul>
                 </div>
 
