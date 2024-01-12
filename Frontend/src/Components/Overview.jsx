@@ -10,6 +10,22 @@ import axios from 'axios';
 
 const Overview = () => {
 
+    const [round, setRound] = useState('')
+
+    const params = useParams()
+
+    const fetchData = async () => {
+        const result = await axios.get('http://localhost:8005/get-an-participents/'+params.id)
+        console.log(result.data.participent.round);
+        setRound(result.data.participent.round)
+        console.log(round);
+        // setRound(result.data.participent);
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
     return (
         <div className='overview-wrapper'>
             <div className="settings-container">
@@ -57,7 +73,7 @@ const Overview = () => {
                                     <span>Name</span>
                                 </div>
                                 <div className='sport-name'>
-                                    <span></span>
+                                    <span>{round}</span>
                                 </div>
                             </li>
                             <li>

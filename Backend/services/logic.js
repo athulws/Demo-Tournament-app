@@ -29,6 +29,30 @@ const createTournament = (id, teams, round) =>{
     )
 }
 
+
+
+//get all participents
+
+const getOneParticipents = (id) =>{
+    return db.Teams.findOne({id}).then(
+        (result)=>{
+            if(result){
+                return{
+                    statusCode:200,
+                    participent:result // ee "participent" frontend il use cheyyunnunde
+                }
+            }
+            else{
+                return{
+                    statusCode:404,
+                    message:'No products found'
+                }
+            }
+        }
+    )
+}
+
 module.exports = {
-    createTournament
+    createTournament,
+    getOneParticipents
 }
